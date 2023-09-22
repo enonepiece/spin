@@ -4,7 +4,6 @@
 /*-----------------  VARIABLES  -----------------*/
 :root {
     /* Colors */
-    --gold_color: rgb(255, 215, 0);
     --body_background: linear-gradient(to right, #141e30, #243b55);
     --spin_background: linear-gradient(to right, #ceea69, #f7b733);
 }
