@@ -9,35 +9,14 @@
     --spin_background: linear-gradient(to right, #ceea69, #f7b733);
 }
 /*-----------------  Base  -----------------*/
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'PT Serif', serif;
-}
+
 body {
-  height: 100vh;
   background: var(--body_background);
 }
 /*-----------------  Styling Start  -----------------*/
-h1 {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--gold_color);
-}
-.container {
-  width: 90%;
-  max-width: 34.37rem;
-  margin-top: 3rem;
-  max-height: 90vh;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  padding: 3rem;
-  border-radius: 1rem;
+.header{
+  font-size: 25px;
+  color: white;
 }
 .wheel_box {
   position: relative;
@@ -45,8 +24,8 @@ h1 {
   height: 100%;
 }
 #spinWheel {
-  max-height: inherit;
-  width: inherit;
+  max-height: 540px;
+  width: 960px;
   transform: rotate(270deg);
 }
 #spin_btn {
@@ -54,8 +33,8 @@ h1 {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  height: 20%;
-  width: 20%;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   cursor: pointer;
   border: 0;
@@ -67,17 +46,9 @@ h1 {
   font-weight: 600;
 }
 .fa-solid {
-  position: absolute;
-  top: -8%;
-  left: 43.7%;
   font-size: 4rem;
   color: #2292a7;
-  transform: rotate(-225deg);
 }
-#text {
-  font-size: 1.5rem;
-  text-align: center;
-  margin-top: 1.5rem;
-  color: var(--gold_color);
-  font-weight: 500;
+.text{
+  color:white;
 }
