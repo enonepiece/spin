@@ -105,6 +105,7 @@ spinBtn.addEventListener("click", () => {
 titlebtn.addEventListener('click', () =>{
   for(let i = 0; i <12; i++){
     spinValues[i].value="妳";
+    console.log(spinValues[i].value);
   }
 });
 /* --------------- End Spin Wheel  --------------------- */
