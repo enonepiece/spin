@@ -2,6 +2,7 @@
 const spinWheel = document.getElementById("spinWheel");
 const spinBtn = document.getElementById("spin_btn");
 const text = document.getElementById("text");
+const titlebtn = document.getElementById("title");
 /* --------------- Minimum And Maximum Angle For A value  --------------------- */
 const spinValues = [
   { minDegree: 61, maxDegree: 90, value: "" },
@@ -68,7 +69,8 @@ let spinChart = new Chart(spinWheel, {
 /* --------------- Display Value Based On The Angle --------------------- */
 const generateValue = (angleValue) => {
   for(let i = 0; i <12; i++){
-    spinValues[i].value=document.getElementById("value"+(i+1).toString()).value;
+    if(spinValues[i].value=="")
+      spinValues[i].value=document.getElementById("value"+(i+1).toString()).value;
   }
   for (let i of spinValues) {
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
@@ -99,5 +101,10 @@ spinBtn.addEventListener("click", () => {
       resultValue = 101;
     }
   }, 10);
+});
+titlebtn.addEventListener('click', () =>{
+  for(let i = 0; i <12; i++){
+    spinValues[i].value="妳";
+  }
 });
 /* --------------- End Spin Wheel  --------------------- */
