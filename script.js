@@ -4,18 +4,18 @@ const spinBtn = document.getElementById("spin_btn");
 const text = document.getElementById("text");
 /* --------------- Minimum And Maximum Angle For A value  --------------------- */
 const spinValues = [
-  { minDegree: 61, maxDegree: 90, value: "牛肉麵" },
-  { minDegree: 31, maxDegree: 60, value: "炒飯" },
-  { minDegree: 0, maxDegree: 30, value: "乞丐時光" },
-  { minDegree: 331, maxDegree: 360, value: "滷肉飯" },
-  { minDegree: 301, maxDegree: 330, value: "水喝到飽" },
-  { minDegree: 271, maxDegree: 300, value: "雞腿便當" },
-  { minDegree: 241, maxDegree: 270, value: "排骨便當" },
-  { minDegree: 211, maxDegree: 240, value: "炒麵" },
-  { minDegree: 181, maxDegree: 210, value: "牛排" },
-  { minDegree: 151, maxDegree: 180, value: "湯麵" },
-  { minDegree: 121, maxDegree: 150, value: "泡麵" },
-  { minDegree: 91, maxDegree: 120, value: "妳" },
+  { minDegree: 61, maxDegree: 90, value: "" },
+  { minDegree: 31, maxDegree: 60, value: "" },
+  { minDegree: 0, maxDegree: 30, value: "" },
+  { minDegree: 331, maxDegree: 360, value: "" },
+  { minDegree: 301, maxDegree: 330, value: "" },
+  { minDegree: 271, maxDegree: 300, value: "" },
+  { minDegree: 241, maxDegree: 270, value: "" },
+  { minDegree: 211, maxDegree: 240, value: "" },
+  { minDegree: 181, maxDegree: 210, value: "" },
+  { minDegree: 151, maxDegree: 180, value: "" },
+  { minDegree: 121, maxDegree: 150, value: "" },
+  { minDegree: 91, maxDegree: 120, value: "" },
 ];
 /* --------------- Size Of Each Piece  --------------------- */
 const size = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10];
@@ -67,6 +67,9 @@ let spinChart = new Chart(spinWheel, {
 });
 /* --------------- Display Value Based On The Angle --------------------- */
 const generateValue = (angleValue) => {
+  for(let i = 0; i <12; i++){
+    spinValues[i].value=document.getElementById("value"+(i+1).toString()).value;
+  }
   for (let i of spinValues) {
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
       text.innerHTML = `<p>這一餐要吃的是~~ ${i.value} ! </p>`;
