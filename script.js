@@ -102,10 +102,10 @@ spinBtn.addEventListener("click", () => {
     }
   }, 10);
 });
-titlebtn.addEventListener('click', () =>{
+/*titlebtn.addEventListener('click', () =>{
   for(let i = 0; i <12; i++){
-    spinValues[i].value="妳";
+    spinValues[i].value="";
     console.log(spinValues[i].value);
   }
-});
+});*/
 /* --------------- End Spin Wheel  --------------------- */
